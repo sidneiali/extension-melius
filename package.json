@@ -1,0 +1,237 @@
+{
+    "name": "pack-melius-vscode",
+    "displayName": "pack-melius-vscode",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.71.0"
+    },
+    "categories": [
+        "Extension Packs"
+    ],
+    "extensionPack": [ 
+        "2gua.rainbow-brackets", 
+        "bmewburn.vscode-intelephense-client", 
+        "chrisvltn.vs-code-semicolon-insertion", 
+        "cweijan.vscode-autohotkey-plus", 
+        "dbaeumer.vscode-eslint", 
+        "dracula-theme.theme-dracula", 
+        "eamodio.gitlens", 
+        "ecmel.vscode-html-css", 
+        "EditorConfig.EditorConfig", 
+        "esbenp.prettier-vscode", 
+        "formulahendry.auto-rename-tag", 
+        "junstyle.php-cs-fixer", 
+        "meganrogge.template-string-converter", 
+        "mhutchie.git-graph", 
+        "ms-edgedevtools.vscode-edge-devtools", 
+        "ms-vscode.js-debug-nightly", 
+        "natqe.reload", 
+        "naumovs.color-highlight", 
+        "oderwat.indent-rainbow", 
+        "PKief.material-icon-theme", 
+        "redhat.vscode-yaml", 
+        "ritwickdey.LiveServer", 
+        "Shan.code-settings-sync", 
+        "sleistner.vscode-fileutils", 
+        "tomoki1207.pdf", 
+        "xdebug.php-debug", 
+        "zero-plusplus.vscode-autohotkey-debug", 
+        "Zignd.html-css-class-completion"
+    ],
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "ctrl+shift+alt+pagedown",
+                "command": "editor.action.copyLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "shift+alt+down",
+                "command": "-editor.action.copyLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+shift+alt+pageup",
+                "command": "editor.action.copyLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "shift+alt+up",
+                "command": "-editor.action.copyLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "shift+f2",
+                "command": "fileutils.renameFile"
+            }
+        ],
+        "debuggers": [{
+            "initialConfigurations": [
+                {
+                    "name": "Xdebug",
+                    "type": "php",
+                    "request": "launch",
+                    "port": 9003
+                }
+            ]
+        }],
+        "configuration": {
+            "title": "VsCode Dev melius",
+            "properties": {
+                "editor.fontFamily": {
+                    "type": "string",
+                    "default": "JetBrains Mono"
+                },
+                "editor.fontLigatures": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "editor.fontSize": {
+                    "type": "number",
+                    "default": 16
+                },
+                "editor.lineHeight": {
+                    "type": "number",
+                    "default": 26
+                },
+                "editor.minimap.enabled": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "editor.renderLineHighlight": {
+                    "type": "string",
+                    "default": "gutter"
+                },
+                "editor.rulers": {
+                    "type": "array",
+                    "default": [
+                        60, 80
+                    ]
+                },
+                "editor.tabSize": {
+                    "type": "number",
+                    "default": 4
+                },
+                "editor.unicodeHighlight.ambiguousCharacters": {
+                    "type": "boolean",
+                    "default": false
+                },
+
+                "explorer.compactFolders": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "explorer.confirmDelete": {
+                    "type": "boolean",
+                    "default": false
+                },
+                
+                "terminal.integrated.fontSize": {
+                    "type": "number",
+                    "default": 4
+                },
+                
+                "workbench.colorTheme": {
+                    "type": "string",
+                    "default": "Dracula"
+                },
+                "workbench.iconTheme": {
+                    "type": "string",
+                    "default": "material-icon-theme"
+                },
+                "workbench.editor.labelFormat": {
+                    "type": "string",
+                    "default": "short"
+                },
+                "workbench.startupEditor": {
+                    "type": "string",
+                    "default": "none"
+                },
+
+                "security.workspace.trust.untrustedFiles": {
+                    "type": "string",
+                    "default": "open"
+                },
+
+                "liveServer.settings.donotShowInfoMsg": {
+                    "type": "boolean",
+                    "default": true
+                },
+
+                "gitlens.hovers.currentLine.over": {
+                    "type": "string",
+                    "default": "line"
+                },
+                "gitlens.codeLens.enabled": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "gitlens.defaultDateLocale": {
+                    "type": "null",
+                    "default": null
+                },
+
+                "intelephense.environment.phpVersion": {
+                    "type": "string",
+                    "default": "7.4.27"
+                },
+                "intelephense.diagnostics.undefinedTypes": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "intelephense.diagnostics.undefinedFunctions": {
+                    "type": "boolean",
+                    "default": false
+                },
+
+                "sync.autoDownload": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "sync.autoUpload": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "sync.forceDownload": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "sync.forceUpload": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "sync.quietSync": {
+                    "type": "boolean",
+                    "default": true
+                },
+
+                "git.enableSmartCommit": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "git.autofetch": {
+                    "type": "boolean",
+                    "default": true
+                },
+
+                "[php]": {
+                    "type": "object",
+                    "default": {
+                        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+                    }
+                },
+
+                "window.menuBarVisibility": {
+                    "type": "string",
+                    "default": "compact"
+                },
+
+                "php-cs-fixer.executablePath": {
+                    "type": "string",
+                    "default": "${extensionPath}/php-cs-fixer.phar"
+                }
+            }
+        }
+    }
+}
